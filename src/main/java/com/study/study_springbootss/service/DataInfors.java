@@ -1,6 +1,6 @@
-package com.study.study_springboots_.service;
+package com.study.study_springbootss.service;
 
-import com.study.study_springboots_.beans.BoardBean;
+import com.study.study_springbootss.beans.BoardBean;
 import java.util.ArrayList;
 import java.util.HashMap;
 import org.springframework.stereotype.Service;

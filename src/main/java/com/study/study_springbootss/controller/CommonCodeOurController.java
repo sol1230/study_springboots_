@@ -1,6 +1,6 @@
-package com.study.study_springboots_.controller;
+package com.study.study_springbootss.controller;
 
-import com.study.study_springboots_.service.CommonCodeOurService;
+import com.study.study_springbootss.service.CommonCodeOurService;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -1,4 +1,4 @@
-package com.study.study_springboots_.beans;
+package com.study.study_springbootss.beans;
 
 public class BoardBean {
   private String title;

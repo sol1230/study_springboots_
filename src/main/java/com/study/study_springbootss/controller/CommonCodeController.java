@@ -1,6 +1,6 @@
-package com.study.study_springboots_.controller;
+package com.study.study_springbootss.controller;
 
-import com.study.study_springboots_.dao.CommonCodeDao;
+import com.study.study_springbootss.dao.CommonCodeDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

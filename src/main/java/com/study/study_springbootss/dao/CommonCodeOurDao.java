@@ -1,4 +1,4 @@
-package com.study.study_springboots_.dao;
+package com.study.study_springbootss.dao;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class CommonCodeOurDao {
     return result;
   }
 
-  public Object update(String sqlMapId, Object dataMap) {
+  public Object updateOne(String sqlMapId, Object dataMap) {
     Object result = sqlSessionTemplate.update(sqlMapId, dataMap);
     return result;
   }

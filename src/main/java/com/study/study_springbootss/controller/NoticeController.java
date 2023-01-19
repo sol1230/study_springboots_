@@ -1,7 +1,7 @@
-package com.study.study_springboots_.controller;
+package com.study.study_springbootss.controller;
 
-import com.study.study_springboots_.beans.BoardBean;
-import com.study.study_springboots_.service.DataInfors;
+import com.study.study_springbootss.beans.BoardBean;
+import com.study.study_springbootss.service.DataInfors;
 import java.util.ArrayList;
 import java.util.HashMap;
 import org.springframework.stereotype.Controller;

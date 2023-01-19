@@ -1,4 +1,4 @@
-package com.study.study_springboots_.dao;
+package com.study.study_springbootss.dao;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,15 +9,13 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @Component
-public class HomeDao {
+public class CommonCodeDao {
   @Autowired
   private SqlSessionTemplate sqlSessionTemplate;
 
   public Object getList() {
-    String statement = "Home.selectfromANSWERSByQUESTIONS_UID";
-    Map parameter = new HashMap();
-    parameter.put("QUESTION_UID", "Q2");
-    Object resultSet = sqlSessionTemplate.selectList(statement, parameter);
+    String statement = "CommonCode.selectfromCIP_COMMON_CODE";
+    Object resultSet = sqlSessionTemplate.selectList(statement);
     return resultSet;
   }
 }
