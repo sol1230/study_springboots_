@@ -1,0 +1,24 @@
+survey_list : 질문 목록
+	unique_id
+	question_list : 질문
+
+question_answer : 답 문항 목록
+	unique_id
+	question_answer : 답 문항
+
+surveyor : 설문자
+	unique_id
+	name
+	birthdate
+
+survey : 질문 - 답 문항 매칭
+	unique_id_survey_list : 질문
+	unique_id_question_answer : 문항
+
+result : 설문 완료
+	unique_id_survey_list : 질문uid
+	unique_id_surveyor : 설문자uid
+	unique_id_question_answer : 문항uid
+
+SELECT UNIQUE_ID_QUESTION_ANSWER
+FROM RESULT WHERE UNIQUE_ID_SURVEYOR=?;

@@ -19,20 +19,24 @@
 		</form>
 	</div>
 </div>
+<%-- pagination --%>
 <nav aria-label="Page navigation example">
- <span>총 갯수 : </span>
+<c:set var="_pagination" value="${resultMap.paginations}" />
+${paginations}
+ <span>총 갯수 : ${_pagination.totalCount}</span>
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
+      <a class="page-link" href="${_pagination.previousPage}" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
         <span class="sr-only">Previous</span>
       </a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
+	<%-- for(int i = 0; i > 9 i++){} --%>
+	<c:forEach var="i" begin="${_pagination.blockStart}" end="${_pagination.blockEnd}" >
+    <li class="page-item"><a class="page-link" href="/commonCodeOur/listPagination/${i}">${i}</a></li>
+	</c:forEach>
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
+      <a class="page-link" href="${_pagination.nextPage}" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
         <span class="sr-only">Next</span>
       </a>
@@ -53,7 +57,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<c:forEach items="${resultMap}" var="resultData" varStatus="loop">
+		<c:forEach items="${resultMap.resultList}" var="resultData" varStatus="loop">
 			<tr>
 				<td class="text-center"><input type="checkbox" class="checkbox"
 					name="COMMON_CODE_ID" value="${resultData.COMMON_CODE_ID}" />
